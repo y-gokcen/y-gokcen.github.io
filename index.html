@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yasemin Gokcen</title>
+<meta name="description" content="Yasemin Gokcen — computational cognitive scientist. PhD candidate at UC Merced working on context gating in predictive language processing; human-autonomy teaming research at NASA Ames.">
+<meta property="og:title" content="Yasemin Gokcen">
+<meta property="og:description" content="Computational cognitive scientist. Language models, EEG, working memory, and human-autonomy teaming.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yasemin.gokcen.me/">
+<link rel="canonical" href="https://yasemin.gokcen.me/">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+
+<header class="masthead">
+  <img class="portrait" src="img/yasemin.jpg" alt="Yasemin Gokcen speaking at a NASA podium" width="400" height="400">
+  <div class="masthead-text">
+  <h1>Yasemin Gokcen</h1>
+  <p class="tagline">Computational cognitive scientist · PhD candidate, UC Merced · Human-Autonomy Teaming Lab, NASA Ames</p>
+  <div class="links">
+    <a href="mailto:ygokcen@ucmerced.edu">ygokcen@ucmerced.edu</a>
+    <a href="https://github.com/y-gokcen">GitHub</a>
+    <a href="https://scholar.google.com/citations?user=xnPKVA8AAAAJ&amp;hl=en">Google Scholar</a>
+    <a href="https://www.linkedin.com/in/yasemin-gokcen-015443337/">LinkedIn</a>
+    <a href="cv/Yasemin_Gokcen_Resume_2026.pdf">CV (PDF)</a>
+  </div>
+  </div>
+</header>
+
+<nav class="sections">
+  <a href="#about">About</a>
+  <a href="#research">Research</a>
+  <a href="#publications">Publications</a>
+  <a href="#presentations">Talks &amp; Posters</a>
+  <a href="#projects">Code</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+</nav>
+
+<section id="about">
+  <h2>About</h2>
+  <p>I study how the brain decides what to remember while it understands language, and I build computational models that make that decision explicit. My dissertation asks whether the working-memory gating mechanisms attributed to prefrontal cortex are what allow us to hold onto the right context for predicting the next word. To answer it I train and compare neural language models, record EEG while people listen to naturalistic stories, and build biologically grounded working-memory models.</p>
+  <p>Alongside the dissertation, I do applied human factors research on autonomous aviation. I spent summer 2025 at <a href="https://wisk.aero/">Wisk Aero</a> and summer 2026 in the Human-Autonomy Teaming Lab at <a href="https://www.nasa.gov/ames/">NASA Ames Research Center</a>, where I continue as a research assistant. That work is about the same underlying question from the other side: how people manage attention and context when they are teamed with automation.</p>
+  <p>I am a two-time <a href="https://arcsfoundation.org/">ARCS Foundation Scholar</a> and a 2026 recipient of the UC Merced Graduate Dean's Dissertation Fellowship. I expect to complete my PhD in May 2027 and am interested in research roles in conversational AI, model evaluation, and human-AI interaction.</p>
+</section>
+
+<section id="research">
+  <h2>Research</h2>
+
+  <h3>Context gating in predictive language processing</h3>
+  <p class="meta">PhD dissertation · UC Merced · with David C. Noelle and Rachel Ryskin</p>
+  <p>Comprehenders constantly predict upcoming words from context, but the memory holding that context is limited and noisy. Something has to decide what to keep and what to let go. Prefrontal cortex is thought to solve this with a gating mechanism: open the gate to update working memory with relevant input, close it to protect what is already there. My dissertation tests whether this gating is what supports prediction during real-time comprehension, using three converging methods.</p>
+  <ul>
+    <li><strong>Language-model comparison.</strong> I trained matched recurrent language models that differ only in whether they have gating (LSTM vs. RNN, several random seeds each) and derived a word-by-word <em>gating utility</em> score: how much better the gated model predicts each word. Gating utility rises with independent measures of working-memory demand from three psycholinguistic frameworks (Dependency Locality Theory, ACT-R retrieval cost, and left-corner parsing), which means gating is recruited exactly where context memory is under the most strain.</li>
+    <li><strong>EEG during naturalistic listening.</strong> Thirty-two participants listened to the ten Natural Stories narratives while I recorded EEG. Mixed-effects models with GPT surprisal, semantic similarity, frequency, and duration as predictors replicate the surprisal–N400 relationship in a naturalistic auditory setting, and the gating-utility score predicts a separate, later component (roughly 400–600 ms), consistent with gating being a distinct process from prediction itself.</li>
+    <li><strong>A biologically grounded working-memory model.</strong> I built a prefrontal-cortex/basal-ganglia working-memory model in Go using the Leabra/Emergent framework, ran parameter sweeps on an HPC cluster with SLURM, and ablated three model variants to identify which memory component carries the effect. A manuscript on adaptive gating for sequence prediction with long-distance dependencies is in preparation.</li>
+  </ul>
+
+  <h3>Human-autonomy teaming in aviation</h3>
+  <p class="meta">NASA Ames Research Center (2026–present) · Wisk Aero (2025)</p>
+  <p>At NASA I owned the reaction-time data for a human-in-the-loop study of remote pilots responding to autonomous detect-and-avoid alerts, turning raw simulation logs into the analysis-ready dataset used by the team, and analyzed response times by alert type and maneuver together with NASA-TLX workload and physiological measures. I also authored a research roadmap on the changing human role in autonomous aviation and served as an embedded observer for a week-long air traffic control simulation with retired controllers. At Wisk Aero I led rapid prototype studies with eye-tracking, physiological sensors, and qualitative methods, and presented findings that shaped product decisions.</p>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+
+  <div class="pub">
+    <div class="title">The Role of Context Gating in Predictive Sentence Processing</div>
+    <div>Yasemin Gokcen, David C. Noelle, and Rachel Ryskin</div>
+    <div class="venue">Proceedings of the 47th Annual Meeting of the Cognitive Science Society (CogSci 2025)
+      <a class="pdf" href="https://escholarship.org/uc/item/21w8j87z">eScholarship</a>
+      <a class="pdf" href="https://escholarship.org/content/qt21w8j87z/qt21w8j87z.pdf">PDF</a>
+    </div>
+  </div>
+
+  <div class="pub">
+    <div class="title">Adaptive Gating in Prefrontal Cortex for Sequence Prediction with Long-Distance Dependencies</div>
+    <div>Yasemin Gokcen, Rachel Ryskin, and David C. Noelle</div>
+    <div class="venue">Manuscript in preparation, 2026</div>
+  </div>
+</section>
+
+<section id="presentations">
+  <h2>Talks &amp; Posters</h2>
+  <p class="small meta">One research line across four years. Click a thumbnail for the full PDF.</p>
+  <div class="grid">
+
+    <div class="card">
+      <a class="thumb" href="posters/2026-ARCS-poster.pdf"><img src="img/2026-ARCS-poster.jpg" alt="ARCS Foundation 2026 poster" loading="lazy"></a>
+      <div class="body">
+        <span class="kind">Poster · April 2026</span>
+        <div class="venue">ARCS Foundation Northern California Chapter, Supernova Scholar Showcase</div>
+        <div class="ttl">The Role of Context Gating in Predictive Sentence Processing</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <a class="thumb" href="posters/2025-SNL-poster.pdf"><img src="img/2025-SNL-poster.jpg" alt="SNL 2025 poster" loading="lazy"></a>
+      <div class="body">
+        <span class="kind">Poster · 2025</span>
+        <div class="venue">Society for the Neurobiology of Language</div>
+        <div class="ttl">The Role of Context Gating in Predictive Sentence Processing</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <a class="thumb" href="posters/2025-CogSci-poster.pdf"><img src="img/2025-CogSci-poster.jpg" alt="CogSci 2025 poster" loading="lazy"></a>
+      <div class="body">
+        <span class="kind">Poster · 2025</span>
+        <div class="venue">Cognitive Science Society (CogSci), San Francisco</div>
+        <div class="ttl">The Role of Context Gating in Predictive Sentence Processing</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <a class="thumb" href="posters/2024-CAMP7-talk.pdf"><img src="img/2024-CAMP7-talk.jpg" alt="CAMP 7 talk slides" loading="lazy"></a>
+      <div class="body">
+        <span class="kind">Talk · 2024</span>
+        <div class="venue">California Meeting on Psycholinguistics (CAMP 7), UC San Diego</div>
+        <div class="ttl">The Role of Context Gating in Predictive Sentence Processing</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <a class="thumb" href="posters/2024-CIN-poster.pdf"><img src="img/2024-CIN-poster.jpg" alt="CIN 2024 poster" loading="lazy"></a>
+      <div class="body">
+        <span class="kind">Poster · 2024</span>
+        <div class="venue">Center for Integrated Neuroscience Inaugural Research Showcase, UC Merced</div>
+        <div class="ttl">The Role of Prefrontal Cortex Context Maintenance and Updating in Predictive Sentence Processing</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <a class="thumb" href="posters/2023-Psychonomics-poster.pdf"><img src="img/2023-Psychonomics-poster.jpg" alt="Psychonomics 2023 poster" loading="lazy"></a>
+      <div class="body">
+        <span class="kind">Poster · 2023</span>
+        <div class="venue">Psychonomic Society Annual Meeting, San Francisco</div>
+        <div class="ttl">The Role of Context Maintenance and Updating in Predictive Sentence Processing</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <a class="thumb" href="posters/2023-SNL-poster.pdf"><img src="img/2023-SNL-poster.jpg" alt="SNL 2023 poster" loading="lazy"></a>
+      <div class="body">
+        <span class="kind">Poster · 2023</span>
+        <div class="venue">Society for the Neurobiology of Language, Marseille</div>
+        <div class="ttl">Sandbox Series: The Role of Context Maintenance and Updating in Predictive Sentence Processing</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Code</h2>
+  <p class="small meta">Research code and demos on <a href="https://github.com/y-gokcen">GitHub</a>.</p>
+
+  <div class="project">
+    <span class="name"><a href="https://github.com/y-gokcen/FSA-Model">FSA-Model</a></span> <span class="stack">Go · Leabra/Emergent · SLURM · R</span>
+    <div>Prefrontal-cortex/basal-ganglia (PBWM) working-memory model that must learn to gate and hold a disambiguating token in order to predict the next symbol of a finite-state-automaton sequence. Adapted from the CompCogNeuro SIR simulation; the computational core of the dissertation.</div>
+  </div>
+
+  <div class="project">
+    <span class="name"><a href="https://github.com/y-gokcen/eeg-language-processing">eeg-language-processing</a></span> <span class="stack">Python · EEG</span>
+    <div>Tests whether GPT-2 surprisal predicts human EEG responses during naturalistic story comprehension, linking language-model predictability to the N400.</div>
+  </div>
+
+  <div class="project">
+    <span class="name"><a href="https://github.com/y-gokcen/lstm-runn-working-memory">lstm-runn-working-memory</a></span> <span class="stack">R · lme4 · tidyverse</span>
+    <div>Analysis comparing LSTM, ReLU-RNN, and tanh-RNN language models (15 seeds each) on the Natural Stories corpus; model residuals serve as a gating-utility measure tested against working-memory demand predictors.</div>
+  </div>
+
+  <div class="project">
+    <span class="name"><a href="https://github.com/y-gokcen/predictive-coding-network">predictive-coding-network</a></span> <span class="stack">Python · NumPy</span>
+    <div>Predictive coding network implemented from scratch with local, prediction-error-driven learning instead of backpropagation; over 90% accuracy on unseen logic-gate sequences.</div>
+  </div>
+
+  <div class="project">
+    <span class="name"><a href="https://github.com/y-gokcen/gpt2-surprisal-demo">gpt2-surprisal-demo</a></span> <span class="stack">JavaScript</span>
+    <div>Interactive word-by-word GPT-2 surprisal calculator, built with AI-assisted development tools and deployed in under an hour. <a href="https://y-gokcen.github.io/gpt2-surprisal-demo/">Live demo</a>.</div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="role">
+    <div class="head"><span class="org">Research Assistant, Human-Autonomy Teaming Lab · NASA Ames Research Center</span><span class="when">Jun 2026 – present</span></div>
+    <div class="small">Summer internship extended into an ongoing role at the lab's request. Reaction-time analysis for a remote-pilot detect-and-avoid study; research roadmap on the human role in autonomous aviation; embedded observer for an air traffic control simulation.</div>
+  </div>
+
+  <div class="role">
+    <div class="head"><span class="org">Human Factors Intern · Wisk Aero</span><span class="when">Jun – Aug 2025</span></div>
+    <div class="small">Applied research on human-automation interaction for autonomous aircraft: rapid prototype studies with eye-tracking and physiological sensors, multimodal data modeling, stakeholder presentations.</div>
+  </div>
+
+  <div class="role">
+    <div class="head"><span class="org">Graduate Teaching Assistant · UC Merced</span><span class="when">Aug 2025 – May 2026</span></div>
+    <div class="small">Led weekly discussion and computer-science lab sections for 100+ students.</div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education &amp; Awards</h2>
+  <ul>
+    <li><strong>PhD, Cognitive and Information Sciences</strong>, University of California, Merced, expected May 2027. Advisors: David C. Noelle and Rachel Ryskin.</li>
+    <li><strong>MS, Cognitive and Information Sciences</strong>, University of California, Merced, 2026.</li>
+    <li><strong>BS, Cognitive/Computational Neuroscience</strong>, The Ohio State University, 2022.</li>
+  </ul>
+  <ul>
+    <li>Graduate Dean's Dissertation Fellowship, UC Merced (2026)</li>
+    <li>ARCS Foundation Scholar, Northern California Chapter (2024–2026)</li>
+    <li>MacKenzie Scott Travel Award (2023)</li>
+    <li>UC Merced Academic Senate Summer Fellowship (2023–2024)</li>
+    <li>ADNiR Scholar, The Ohio State University (2021–2022)</li>
+  </ul>
+</section>
+
+<footer>
+  Yasemin Gokcen · <a href="mailto:ygokcen@ucmerced.edu">ygokcen@ucmerced.edu</a> · <a href="cv/Yasemin_Gokcen_Resume_2026.pdf">CV</a> · Updated September 2026
+</footer>
+
+</main>
+</body>
+</html>
