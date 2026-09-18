@@ -14,11 +14,12 @@
 </head>
 <body>
 <main>
+
 <header class="masthead">
 <img class="portrait" src="img/yasemin.jpg" alt="Yasemin Gokcen speaking at a NASA podium" width="400" height="400">
 <div class="masthead-text">
 <h1>Yasemin Gokcen</h1>
-<p class="tagline">Computational cognitive scientist · PhD candidate, UC Merced · Human-Autonomy Teaming Lab, NASA Ames</p>
+<p class="tagline">Computational cognitive scientist · PhD candidate, UC Merced · Human-Autonomy Teaming Lab, SJSURF/NASA Ames</p>
 <div class="links">
 <a href="mailto:ygokcen@ucmerced.edu">ygokcen@ucmerced.edu</a>
 <a href="https://github.com/y-gokcen">GitHub</a>
@@ -42,7 +43,7 @@
 <section id="about" role="tabpanel" aria-labelledby="tab-about" tabindex="0">
 <h2>About</h2>
 <p>I study how the brain decides what to remember while it understands language, and I build computational models that make that decision explicit. My dissertation asks whether the working-memory gating mechanisms attributed to prefrontal cortex are what allow us to hold onto the right context for predicting the next word. To answer it I train and compare neural language models, record EEG while people listen to naturalistic stories, and build biologically grounded working-memory models.</p>
-<p>Alongside the dissertation, I do applied human factors research on autonomous aviation. I spent summer 2025 at <a href="https://wisk.aero/">Wisk Aero</a> and summer 2026 in the Human-Autonomy Teaming Lab at <a href="https://www.nasa.gov/ames/">NASA Ames Research Center</a>, where I continue as a research assistant. That work is about the same underlying question from the other side: how people manage attention and context when they are teamed with automation.</p>
+<p>Alongside the dissertation, I do applied human factors research on autonomous aviation. I spent summer 2025 at <a href="https://wisk.aero/">Wisk Aero</a> and summer 2026 with the San Jose State Research Foundation in the Human-Autonomy Teaming Lab at <a href="https://www.nasa.gov/ames/">NASA Ames Research Center</a>, where I continue as a research assistant. That work is about the same underlying question from the other side: how people manage attention and context when they are teamed with automation.</p>
 <p>I am a two-time <a href="https://arcsfoundation.org/">ARCS Foundation Scholar</a> and a 2026 recipient of the UC Merced Graduate Dean's Dissertation Fellowship. I expect to complete my PhD in May 2027 and am interested in research roles in conversational AI, model evaluation, and human-AI interaction.</p>
 </section>
 
@@ -57,25 +58,30 @@
 <li><strong>A biologically grounded working-memory model.</strong> I built a prefrontal-cortex/basal-ganglia working-memory model in Go using the Leabra/Emergent framework, ran parameter sweeps on an HPC cluster with SLURM, and ablated three model variants to identify which memory component carries the effect. A manuscript on adaptive gating for sequence prediction with long-distance dependencies is in preparation.</li>
 </ul>
 <h3>Human-autonomy teaming in aviation</h3>
-<p class="meta">NASA Ames Research Center (2026–present) · Wisk Aero (2025)</p>
-<p>At NASA I owned the reaction-time data for a human-in-the-loop study of remote pilots responding to autonomous detect-and-avoid alerts, turning raw simulation logs into the analysis-ready dataset used by the team, and analyzed response times by alert type and maneuver together with NASA-TLX workload and physiological measures. I also authored a research roadmap on the changing human role in autonomous aviation and served as an embedded observer for a week-long air traffic control simulation with retired controllers. At Wisk Aero I led rapid prototype studies with eye-tracking, physiological sensors, and qualitative methods, and presented findings that shaped product decisions.</p>
+<p class="meta">San Jose State University Research Foundation collaboration with NASA Ames Research Center (2026–present) · Wisk Aero (2025)</p>
+<p>With the HAT Lab I owned the reaction-time data for a human-in-the-loop study of remote pilots responding to autonomous detect-and-avoid alerts, turning raw simulation logs into the analysis-ready dataset used by the team, and analyzed response times by alert type and maneuver together with NASA-TLX workload and physiological measures. I also authored a research roadmap on the changing human role in autonomous aviation and served as an embedded observer for a week-long air traffic control simulation with retired controllers. At Wisk Aero I led rapid prototype studies with eye-tracking, physiological sensors, and qualitative methods, and presented findings that shaped product decisions.</p>
 </section>
 
 <section id="publications" role="tabpanel" aria-labelledby="tab-publications" tabindex="0" hidden>
 <h2>Publications</h2>
 <div class="pub">
 <div class="title">The Role of Context Gating in Predictive Sentence Processing</div>
-<div class="venue">Yasemin Gokcen, David C. Noelle, and Rachel Ryskin · Proceedings of the 47th Annual Meeting of the Cognitive Science Society (CogSci 2025)</div>
-<a class="pdf" href="https://escholarship.org/uc/item/21w8j87z">eScholarship record</a> · <a class="pdf" href="https://escholarship.org/content/qt21w8j87z/qt21w8j87z.pdf">PDF</a>
+<div>Yasemin Gokcen, David C. Noelle, and Rachel Ryskin</div>
+<div class="venue">Proceedings of the 47th Annual Meeting of the Cognitive Science Society (CogSci 2025)
+<a class="pdf" href="https://escholarship.org/uc/item/21w8j87z">eScholarship</a>
+<a class="pdf" href="https://escholarship.org/content/qt21w8j87z/qt21w8j87z.pdf">PDF</a>
+</div>
 </div>
 <div class="pub">
 <div class="title">Adaptive Gating in Prefrontal Cortex for Sequence Prediction with Long-Distance Dependencies</div>
-<div class="venue">Yasemin Gokcen, Rachel Ryskin, and David C. Noelle · Manuscript in preparation, 2026</div>
+<div>Yasemin Gokcen, Rachel Ryskin, and David C. Noelle</div>
+<div class="venue">Manuscript in preparation, 2026</div>
 </div>
 </section>
 
 <section id="presentations" role="tabpanel" aria-labelledby="tab-presentations" tabindex="0" hidden>
 <h2>Talks &amp; Posters</h2>
+<p class="small meta">One research line across four years. Click a thumbnail for the full PDF.</p>
 <div class="grid">
 <div class="card">
 <a class="thumb" href="posters/2026-ARCS-poster.pdf"><img src="img/2026-ARCS-poster.jpg" alt="ARCS Foundation 2026 poster" loading="lazy"></a>
@@ -138,14 +144,34 @@
 
 <section id="projects" role="tabpanel" aria-labelledby="tab-projects" tabindex="0" hidden>
 <h2>Code</h2>
-<p class="todo">TODO: add project entries here (each as &lt;div class="project"&gt;&lt;div class="name"&gt;…&lt;/div&gt;&lt;div class="stack"&gt;…&lt;/div&gt;&lt;/div&gt;) — nothing found in the repo to migrate for this tab yet.</p>
+<p class="small meta">Research code and demos on <a href="https://github.com/y-gokcen">GitHub</a>.</p>
+<div class="project">
+<span class="name"><a href="https://github.com/y-gokcen/FSA-Model">FSA-Model</a></span> <span class="stack">Go · Leabra/Emergent · SLURM · R</span>
+<div>Prefrontal-cortex/basal-ganglia (PBWM) working-memory model that must learn to gate and hold a disambiguating token in order to predict the next symbol of a finite-state-automaton sequence. Adapted from the CompCogNeuro SIR simulation; the computational core of the dissertation.</div>
+</div>
+<div class="project">
+<span class="name"><a href="https://github.com/y-gokcen/eeg-language-processing">eeg-language-processing</a></span> <span class="stack">Python · EEG</span>
+<div>Tests whether GPT-2 surprisal predicts human EEG responses during naturalistic story comprehension, linking language-model predictability to the N400.</div>
+</div>
+<div class="project">
+<span class="name"><a href="https://github.com/y-gokcen/lstm-runn-working-memory">lstm-runn-working-memory</a></span> <span class="stack">R · lme4 · tidyverse</span>
+<div>Analysis comparing LSTM, ReLU-RNN, and tanh-RNN language models (15 seeds each) on the Natural Stories corpus; model residuals serve as a gating-utility measure tested against working-memory demand predictors.</div>
+</div>
+<div class="project">
+<span class="name"><a href="https://github.com/y-gokcen/predictive-coding-network">predictive-coding-network</a></span> <span class="stack">Python · NumPy</span>
+<div>Predictive coding network implemented from scratch with local, prediction-error-driven learning instead of backpropagation; over 90% accuracy on unseen logic-gate sequences.</div>
+</div>
+<div class="project">
+<span class="name"><a href="https://github.com/y-gokcen/gpt2-surprisal-demo">gpt2-surprisal-demo</a></span> <span class="stack">JavaScript</span>
+<div>Interactive word-by-word GPT-2 surprisal calculator, built with AI-assisted development tools and deployed in under an hour. <a href="https://y-gokcen.github.io/gpt2-surprisal-demo/">Live demo</a>.</div>
+</div>
 </section>
 
 <section id="experience" role="tabpanel" aria-labelledby="tab-experience" tabindex="0" hidden>
 <h2>Experience</h2>
 <div class="role">
-<div class="head"><span class="org">Research Assistant, Human-Autonomy Teaming Lab · NASA Ames Research Center</span><span class="when">Jun 2026 – present</span></div>
-<div class="small">Summer internship extended into an ongoing role at the lab's request. Reaction-time analysis for a remote-pilot detect-and-avoid study; research roadmap on the human role in autonomous aviation; embedded observer for an air traffic control simulation.</div>
+<div class="head"><span class="org">Research Assistant, San Jose State Research Foundation + Human-Autonomy Teaming Lab · NASA Ames Research Center</span><span class="when">Jun 2026 – present</span></div>
+<div class="small">Summer internship extended into an ongoing role. Reaction-time analysis for a remote-pilot detect-and-avoid study; research roadmap on the human role in autonomous aviation; embedded observer for an air traffic control simulation.</div>
 </div>
 <div class="role">
 <div class="head"><span class="org">Human Factors Intern · Wisk Aero</span><span class="when">Jun – Aug 2025</span></div>
@@ -153,7 +179,7 @@
 </div>
 <div class="role">
 <div class="head"><span class="org">Graduate Teaching Assistant · UC Merced</span><span class="when">Aug 2025 – May 2026</span></div>
-<div class="small">TA for cognitive science classes taught at UC Merced, including Introduction to AI, Introduction to Linguistics, Cognitive Neuroscience, Computational Cognitive Neuroscience, and Scientific Thinking. Led weekly discussion and computer-science lab sections for 100+ students. Provided detailed feedback for students and collaborated with professor on class and evalutation materials.</div>
+<div class="small">Led weekly discussion and computer-science lab sections for 100+ students.</div>
 </div>
 </section>
 
@@ -192,7 +218,6 @@ Yasemin Gokcen · <a href="mailto:ygokcen@ucmerced.edu">ygokcen@ucmerced.edu</a>
       if (match) found = true;
     });
     if (!found) {
-      // Unknown hash — fall back to the default tab instead of showing nothing.
       id = defaultTab;
       panels.forEach(function (panel) {
         panel.hidden = panel.id !== id;
