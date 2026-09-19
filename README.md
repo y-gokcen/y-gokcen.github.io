@@ -2,7 +2,7 @@
 
 Personal academic site for Yasemin Gokcen. Plain HTML and CSS, no build step, hosted on GitHub Pages.
 
-- `index.html` — the site (single page)
+- `index.html` — the site (tabs)
 - `style.css` — styles (light/dark via `prefers-color-scheme`)
 - `cv/` — current resume PDF
 - `posters/` — conference posters and talk slides (PDF)
