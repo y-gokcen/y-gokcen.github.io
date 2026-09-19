@@ -173,8 +173,30 @@ color: var(--muted);
 font-size: 0.88rem;
 }
 @media (max-width: 560px) {
-header.masthead { flex-direction: column; align-items: flex-start; gap: 18px; }
-header.masthead .portrait { width: 132px; height: 132px; flex-basis: auto; }
+/* Compact header: small portrait beside the name instead of stacked above it */
+header.masthead { align-items: center; gap: 16px; margin-bottom: 20px; }
+header.masthead .portrait { width: 84px; height: 84px; flex-basis: 84px; border-radius: 10px; }
+header.masthead h1 { font-size: 1.7rem; margin-bottom: 2px; }
+header.masthead .tagline { font-size: 0.92rem; line-height: 1.4; margin-bottom: 8px; }
+header.masthead .links { font-size: 0.88rem; gap: 4px 14px; }
+/* Tab bar: one scrollable row, sticky so sections can be switched without scrolling back up */
+nav.sections {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--bg);
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 0 20px;
+  padding: 0;
+  margin: 0 -20px 28px;
+  padding-left: 20px;
+  padding-right: 20px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+nav.sections::-webkit-scrollbar { display: none; }
+nav.sections a[role="tab"] { padding: 12px 0; white-space: nowrap; }
 }
 @media (max-width: 480px) {
 body { font-size: 16px; }
