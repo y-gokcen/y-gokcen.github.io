@@ -173,35 +173,37 @@ color: var(--muted);
 font-size: 0.88rem;
 }
 @media (max-width: 560px) {
-/* Compact header: small portrait beside the name instead of stacked above it */
-header.masthead { align-items: center; gap: 16px; margin-bottom: 20px; }
+/* Phone layout: header and tab bar stay fixed; only the active section scrolls */
+html, body { height: 100%; overflow: hidden; }
+main {
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px 0;
+  overflow: hidden;
+}
+header.masthead { flex: none; align-items: center; gap: 16px; margin-bottom: 14px; }
 header.masthead .portrait { width: 84px; height: 84px; flex-basis: 84px; border-radius: 10px; }
 header.masthead h1 { font-size: 1.7rem; margin-bottom: 2px; }
 header.masthead .tagline { font-size: 0.92rem; line-height: 1.4; margin-bottom: 8px; }
 header.masthead .links { font-size: 0.88rem; gap: 4px 14px; }
-/* Tab bar: one scrollable row, sticky so sections can be switched without scrolling back up */
-nav.sections {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  background: var(--bg);
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  gap: 0 20px;
-  padding: 0;
-  margin: 0 -20px 28px;
-  padding-left: 20px;
-  padding-right: 20px;
-  scrollbar-width: none;
+nav.sections { flex: none; gap: 0 16px; padding: 4px 0; margin-bottom: 0; }
+nav.sections a[role="tab"] { padding: 7px 0; }
+main > section[role="tabpanel"]:not([hidden]) {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  margin-bottom: 0;
+  padding: 22px 0 32px;
 }
-nav.sections::-webkit-scrollbar { display: none; }
-nav.sections a[role="tab"] { padding: 12px 0; white-space: nowrap; }
+main > section[role="tabpanel"] h2 { margin-top: 0; }
+footer { display: none; }
 }
+
 @media (max-width: 480px) {
 body { font-size: 16px; }
-header.masthead h1 { font-size: 1.9rem; }
-main { padding-top: 32px; }
 }
 /* --- Tab navigation (appended for click-to-switch sections) --- */
 
