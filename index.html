@@ -45,7 +45,7 @@
 
 <section id="about" role="tabpanel" aria-labelledby="tab-about" tabindex="0">
 <h2>About</h2>
-<p>I study how the brain decides what to remember while it understands language, and I build computational models that make that decision explicit. My dissertation asks whether the working-memory gating mechanisms attributed to prefrontal cortex are what allow us to hold onto the right context for predicting the next word. To answer it I train and compare neural language models, record EEG while people listen to naturalistic stories, and build biologically grounded working-memory models.</p>
+<p>I study how the brain decides what to remember as it processes language input, and I build computational models that make that decision explicit. My dissertation asks whether the working-memory gating mechanisms attributed to prefrontal cortex are what allow us to hold onto the right context for predicting the next word. To answer it I train and compare neural language models, record EEG while people listen to naturalistic stories, and build biologically grounded working-memory models.</p>
 <p>Alongside the dissertation, I do applied human factors research on autonomous aviation. I spent summer 2025 at <a href="https://wisk.aero/">Wisk Aero</a> and summer 2026 in the Human-Autonomy Teaming Lab at <a href="https://www.nasa.gov/ames/">NASA Ames Research Center</a>, through the San José State University Research Foundation (SJSURF), where I continue as a research assistant. That work is about the same underlying question from the other side: how people manage attention and context when they are teamed with automation.</p>
 <p>I am a two-time <a href="https://arcsfoundation.org/">ARCS Foundation Scholar</a> and a 2026 recipient of the UC Merced Graduate Dean's Dissertation Fellowship. I expect to complete my PhD in May 2027 and am interested in research roles in conversational AI, model evaluation, and human-AI interaction.</p>
 </section>
@@ -57,12 +57,12 @@
 <p>Comprehenders constantly predict upcoming words from context, but the memory holding that context is limited and noisy. Something has to decide what to keep and what to let go. Prefrontal cortex is thought to solve this with a gating mechanism: open the gate to update working memory with relevant input, close it to protect what is already there. My dissertation tests whether this gating is what supports prediction during real-time comprehension, using three converging methods.</p>
 <ul>
 <li><strong>Language-model comparison.</strong> I trained matched recurrent language models that differ only in whether they have gating (LSTM vs. RNN, several random seeds each) and derived a word-by-word <em>gating utility</em> score: how much better the gated model predicts each word. Gating utility rises with independent measures of working-memory demand from three psycholinguistic frameworks (Dependency Locality Theory, ACT-R retrieval cost, and left-corner parsing), which means gating is recruited exactly where context memory is under the most strain.</li>
-<li><strong>EEG during naturalistic listening.</strong> Thirty-two participants listened to the ten Natural Stories narratives while I recorded EEG. Mixed-effects models with GPT surprisal, semantic similarity, frequency, and duration as predictors replicate the surprisal–N400 relationship in a naturalistic auditory setting, and the gating-utility score predicts a separate, later component (roughly 400–600 ms), consistent with gating being a distinct process from prediction itself.</li>
+<li><strong>EEG during naturalistic listening.</strong> I collected EEG from 32 participants as they listened to narratives from the ten-story Natural Stories corpus; after one exclusion, 31 contributed to the analysis. Mixed-effects models with GPT surprisal, semantic similarity, frequency, and duration as predictors replicate the surprisal–N400 relationship in a naturalistic auditory setting, and the gating-utility score predicts a separate, later component (roughly 400–600 ms), consistent with gating being a distinct process from prediction itself.</li>
 <li><strong>A biologically grounded working-memory model.</strong> I built a prefrontal-cortex/basal-ganglia working-memory model in Go using the Leabra/Emergent framework, ran parameter sweeps on an HPC cluster with SLURM, and ablated three model variants to identify which memory component carries the effect. A manuscript on adaptive gating for sequence prediction with long-distance dependencies is in preparation.</li>
 </ul>
 <h3>Human-autonomy teaming in aviation</h3>
 <p class="meta">Human-Autonomy Teaming Lab, NASA Ames Research Center, via SJSURF (2026–present) · Wisk Aero (2025)</p>
-<p>With the HAT Lab I owned the reaction-time data for a human-in-the-loop study of remote pilots responding to autonomous detect-and-avoid alerts, turning raw simulation logs into the analysis-ready dataset used by the team, and analyzed response times by alert type and maneuver together with NASA-TLX workload and physiological measures. I also authored a research roadmap for a five-year agenda on the changing human role in autonomous aviation and served as an embedded observer for a week-long air traffic control simulation with retired controllers. At Wisk Aero I led rapid prototype studies with eye-tracking, physiological sensors, and qualitative methods, and presented findings that shaped product decisions.</p>
+<p>With the HAT Lab I owned the reaction-time data for a human-in-the-loop study of remote pilots responding to autonomous detect-and-avoid alerts, turning raw simulation logs into the analysis-ready dataset used by the team. I analyzed response times by alert type and maneuver and began integrating NASA-TLX workload and physiological measures. I also authored a research roadmap for a five-year agenda on the changing human role in autonomous aviation and served as an embedded observer for a week-long air traffic control simulation with retired controllers. At Wisk Aero I led rapid prototype studies with eye-tracking, physiological sensors, and qualitative methods, and presented findings that shaped product decisions.</p>
 </section>
 
 <section id="publications" role="tabpanel" aria-labelledby="tab-publications" tabindex="0" hidden>
@@ -166,7 +166,7 @@
 </div>
 <div class="project">
 <span class="name"><a href="https://github.com/y-gokcen/lstm-runn-working-memory">lstm-runn-working-memory</a></span> <span class="stack">R · lme4 · tidyverse</span>
-<div>Analysis comparing LSTM, ReLU-RNN, and tanh-RNN language models (15 seeds each) on the Natural Stories corpus; model residuals serve as a gating-utility measure tested against working-memory demand predictors.</div>
+<div>Analysis comparing LSTM, ReLU-RNN, and tanh-RNN language models (five trained replications per architecture; 15 models total) on the Natural Stories corpus; model residuals serve as a gating-utility measure tested against working-memory demand predictors.</div>
 </div>
 <div class="project">
 <span class="name"><a href="https://github.com/y-gokcen/predictive-coding-network">predictive-coding-network</a></span> <span class="stack">Python · NumPy</span>
@@ -182,7 +182,7 @@
 <h2>Experience</h2>
 <div class="role">
 <div class="head"><span class="org">Research Assistant, Human-Autonomy Teaming Lab at NASA Ames · San José State University Research Foundation (part-time)</span><span class="when">Jun 2026 – present</span></div>
-<div class="small">Summer internship extended into an ongoing role. Reaction-time analysis for a remote-pilot detect-and-avoid study; research roadmap on the human role in autonomous aviation; embedded observer for an air traffic control simulation.</div>
+<div class="small">Following the summer internship, I continued as a research assistant at the lab's request. Reaction-time analysis for a remote-pilot detect-and-avoid study; research roadmap on the human role in autonomous aviation; embedded observer for an air traffic control simulation.</div>
 </div>
 <div class="role">
 <div class="head"><span class="org">Human Factors Intern · Wisk Aero</span><span class="when">Jun – Aug 2025</span></div>
